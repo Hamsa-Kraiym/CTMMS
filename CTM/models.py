@@ -10,7 +10,7 @@ class Patient(models.Model):
     registration_date = models.DateTimeField("date published")
 
     def __str__(self):
-        return self.name + ' (#' + self.id + ') ' 
+        return self.name + ' (#' + str(self.id) + ') ' 
 
 
 class Medication(models.Model):
@@ -19,7 +19,7 @@ class Medication(models.Model):
     description = models.TextField(null=True)
 
     def __str__(self):
-        return self.name + ' (#' + self.id + ') ' 
+        return self.name + ' (#' + str(self.id) + ') ' 
 
 class Prescription(models.Model):
     #prescription_id = models.SmallAutoField()
