@@ -1,0 +1,65 @@
+﻿id,medication_id,amount,entry_date,source
+1,1,55,2025-06-05,Turkish Red Crescent
+2,5,45,2025-02-11,UNRWA
+3,2,243,2025-06-06,Turkish Red Crescent
+4,2,253,2025-02-12,Turkish Red Crescent
+5,2,131,2025-04-03,UNRWA
+6,5,67,2025-06-01,Turkish Red Crescent
+7,3,69,2025-03-31,Turkish Red Crescent
+8,2,50,2025-03-01,Ministry of Health
+9,2,300,2025-04-03,Ministry of Health
+10,5,126,2025-06-26,UNRWA
+11,3,157,2025-06-24,Ministry of Health
+12,3,269,2025-05-29,Ministry of Health
+13,1,118,2025-03-12,Ministry of Health
+14,1,283,2025-03-22,International Aid
+15,5,60,2025-05-24,Ministry of Health
+16,2,182,2025-06-07,UNRWA
+17,3,298,2025-05-12,Turkish Red Crescent
+18,2,125,2025-04-15,Ministry of Health
+19,4,232,2025-07-16,UNRWA
+20,5,127,2025-02-26,Ministry of Health
+21,1,272,2025-05-03,Turkish Red Crescent
+22,1,187,2025-06-18,Turkish Red Crescent
+23,1,44,2025-07-12,UNRWA
+24,4,112,2025-03-07,Ministry of Health
+25,3,283,2025-03-23,UNRWA
+26,5,196,2025-06-06,Turkish Red Crescent
+27,1,288,2025-03-29,Ministry of Health
+28,1,190,2025-01-17,Ministry of Health
+29,3,197,2025-03-12,UNRWA
+30,5,243,2025-05-31,UNRWA
+31,3,263,2025-06-01,International Aid
+32,5,241,2025-03-07,International Aid
+33,2,36,2025-06-27,Turkish Red Crescent
+34,3,289,2025-02-14,Turkish Red Crescent
+35,4,290,2025-05-01,Turkish Red Crescent
+36,2,28,2025-02-07,International Aid
+37,1,187,2025-05-07,UNRWA
+38,2,113,2025-04-03,International Aid
+39,5,166,2025-03-25,Ministry of Health
+40,5,99,2025-04-21,UNRWA
+41,2,134,2025-01-16,UNRWA
+42,2,243,2025-03-08,Ministry of Health
+43,4,86,2025-05-03,International Aid
+44,2,219,2025-05-05,International Aid
+45,4,15,2025-03-07,Ministry of Health
+46,3,218,2025-01-17,UNRWA
+47,2,97,2025-01-24,UNRWA
+48,4,115,2025-06-26,International Aid
+49,3,123,2025-03-12,UNRWA
+50,4,146,2025-01-16,UNRWA
+51,1,223,2025-03-08,Ministry of Health
+52,3,31,2025-03-02,UNRWA
+53,5,26,2025-01-28,UNRWA
+54,5,81,2025-03-31,Ministry of Health
+55,1,48,2025-05-20,Ministry of Health
+56,4,255,2025-02-13,International Aid
+57,3,277,2025-03-30,International Aid
+58,5,218,2025-04-02,International Aid
+59,4,46,2025-04-05,International Aid
+60,4,73,2025-02-19,International Aid
+61,1,206,2025-07-18,UNRWA
+62,4,112,2025-07-18,UNRWA
+63,5,289,2025-07-18,Turkish Red Crescent
+64,3,74,2025-07-18,UNRWA
