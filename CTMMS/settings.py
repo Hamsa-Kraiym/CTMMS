@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
 ]
 
 MIDDLEWARE = [
@@ -87,6 +88,8 @@ STATICFILES_DIRS = (
 #############################################################
 
 
+
+
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
@@ -95,7 +98,7 @@ DATABASES = {
         "ENGINE": "django.db.backends.postgresql",
         "HOST": "localhost",
         "USER": "postgres",
-        "PASSWORD": "hamsa@post",
+        "PASSWORD": "root",
         "NAME": "ctm", 
         "PORT": "5432"
     }
@@ -142,3 +145,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRONTAB_COMMAND_PREFIX = '>> /tmp/cronlog.log 2>> /tmp/cronerr.log'
+CRONJOBS = [
+    ('*/1 * * * *', 'django.core.management.call_command', ['run_weekly_data']),
+]
+
+
+
+
