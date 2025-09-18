@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import Sum, F, DecimalField
 
 # Create your models here.
 class Patient(models.Model):
@@ -10,7 +11,11 @@ class Patient(models.Model):
     registration_date = models.DateTimeField("date published")
 
     def __str__(self):
-        return self.name + ' (#' + str(self.id) + ') ' 
+        return self.name + ' (#' + str(self.id) + ') '
+
+    @classmethod
+    def total_patients(cls):
+        return cls.objects.count()
 
 
 class Medication(models.Model):
