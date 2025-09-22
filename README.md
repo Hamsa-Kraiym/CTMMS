@@ -30,6 +30,32 @@ Technical Description:
   - UI: Interactive dashboards with Chart.js & DataTables
   - Admin: CSV import/export with django-import-export
 
+Installed Libraries:
+
+  - asgiref==3.9.1
+  - certifi==2025.6.15
+  - diff-match-patch==20241021
+  - distlib==0.3.9
+  - Django==5.2.4
+  - django-crontab==0.7.1
+  - django-import-export==4.3.9
+  - Faker==37.8.0
+  - filelock==3.18.0
+  - numpy==2.3.3
+  - packaging==25.0
+  - pandas==2.3.2
+  - pipenv==2025.0.3
+  - platformdirs==4.3.8
+  - psycopg==3.2.9
+  - python-dateutil==2.9.0.post
+  - pytz==2025.2
+  - setuptools==80.9.0
+  - six==1.17.0
+  - sqlparse==0.5.3
+  - tablib==3.8.0
+  - tzdata==2025.2
+  - virtualenv==20.31.2
+
 Team Members:
 
 -	Aya Al -Shanti
