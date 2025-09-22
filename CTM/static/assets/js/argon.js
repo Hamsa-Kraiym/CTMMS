@@ -821,7 +821,7 @@ if($map.length) {
 //
 // Bars chart
 //
-
+/*
 var BarsChart = (function() {
 
 	//
@@ -861,13 +861,13 @@ var BarsChart = (function() {
 	}
 
 })();
-
+*/
 'use strict';
 
 //
 // Sales chart
 //
-
+/*
 var SalesChart = (function() {
 
   // Variables
@@ -938,7 +938,7 @@ var SalesChart = (function() {
   }
 
 })();
-
+*/
 //
 // Bootstrap Datepicker
 //

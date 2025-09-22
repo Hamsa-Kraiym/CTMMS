@@ -9,6 +9,7 @@ path('', lambda request: redirect('admin/')),
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.index, name="index"),
     path("dashboard", views.dashboard, name="dashboard"),
+    path('medic_amounts', views.availablity_report, name="availablity_report"),
+    path("", views.dashboard, name="index")
 ]

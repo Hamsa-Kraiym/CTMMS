@@ -12,8 +12,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         fake = Faker()
-        statuses = ["Stable", "Critical", "Improving", "Deteriorating"]
-        sources = ["Ministry of Health", "International Aid", "UNRWA", "Turkish Red Crescent"]
+        statuses = ["Active-Treatment", "Post-Treatment", "Survivorship", "Chronic Illness", "Palliative Care"]
+        sources = ["Ministry of Health", "World Health Organization", "UNRWA", "Turkish Red Crescent"]
 
         output_dir = "dummy_csv"
         os.makedirs(output_dir, exist_ok=True)

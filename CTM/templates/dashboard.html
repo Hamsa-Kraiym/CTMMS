@@ -1,93 +1,305 @@
 {% extends "index.html" %}
 {% block patient_card %}
-    <div class="card card-stats">
-        <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">{{ total_title }}</h5>
-                      <span class="h2 font-weight-bold mb-0">{{ totalNo }}</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-ambulance"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-{{ up_down_arrow }}"></i> {{ change_percent }} </span>
-                    <span class="text-nowrap">{{ change_note }}</span>
-                  </p>
-                </div>
-              </div>
+<div class="card card-stats">
+  <!-- Card body -->
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h5 class="card-title text-uppercase text-muted mb-0">Total Patients</h5>
+        <span class="h2 font-weight-bold mb-0">{{ ptotalNo }}</span>
+      </div>
+      <div class="col-auto">
+        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+          <i class="ni ni-ambulance"></i>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 mb-0 text-sm">
+      <span class="text-{{ p_arrow_color }}"></i> {{ pchange_percent }}% </span>
+      <span class="text-nowrap">{{ change_note }}</span>
+    </p>
+  </div>
+</div>
 {% endblock %}
 
-{% block patient_card1 %}
-    <div class="card card-stats">
-        <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">{{ total_titlte }}</h5>
-                      <span class="h2 font-weight-bold mb-0">{{ totalNo }}</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-ambulance"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-{{ up_down_arrow }}"></i> {{ change_percent }} </span>
-                    <span class="text-nowrap">{{ change_note }}</span>
-                  </p>
-                </div>
-              </div>
+{% block entries_card %}
+<div class="card card-stats">
+  <!-- Card body -->
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h5 class="card-title text-uppercase text-muted mb-0">Total Medication Entries</h5>
+        <span class="h2 font-weight-bold mb-0">{{ etotalNo }}</span>
+      </div>
+      <div class="col-auto">
+        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+          <i class="ni ni-delivery-fast"></i>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 mb-0 text-sm">
+      <span class="text-{{ e_arrow_color }} mr-2"><i class="fa fa-arrow-{{ e_up_down_arrow }}"></i> {{ echange_percent }}% </span>
+      <span class="text-nowrap">{{ change_note }}</span>
+    </p>
+  </div>
+</div>
 {% endblock %}
 
-{% block patient_card2 %}
-    <div class="card card-stats">
-        <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">{{ total_titlte }}</h5>
-                      <span class="h2 font-weight-bold mb-0">{{ totalNo }}</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-ambulance"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-{{ up_down_arrow }}"></i> {{ change_percent }} </span>
-                    <span class="text-nowrap">{{ change_note }}</span>
-                  </p>
-                </div>
-              </div>
+{% block heald_card %}
+<div class="card card-stats">
+  <!-- Card body -->
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h5 class="card-title text-uppercase text-muted mb-0">Total Recovered Patients</h5>
+        <span class="h2 font-weight-bold mb-0">{{ htotalNo }}</span>
+      </div>
+      <div class="col-auto">
+        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+          <i class="ni ni-satisfied"></i>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 mb-0 text-sm">
+      <span class="text-{{ h_arrow_color }}  mr-2"><i class="fa fa-arrow-{{ h_up_down_arrow }}"></i> {{ hchange_percent }}% </span>
+      <span class="text-nowrap">{{ change_note }}</span>
+    </p>
+  </div>
+</div>
 {% endblock %}
 
-{% block patient_card3 %}
-    <div class="card card-stats">
-        <!-- Card body -->
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">{{ total_titlte }}</h5>
-                      <span class="h2 font-weight-bold mb-0">{{ totalNo }}</span>
-                    </div>
-                    <div class="col-auto">
-                      <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
-                        <i class="ni ni-ambulance"></i>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="mt-3 mb-0 text-sm">
-                    <span class="text-success mr-2"><i class="fa fa-arrow-{{ up_down_arrow }}"></i> {{ change_percent }} </span>
-                    <span class="text-nowrap">{{ change_note }}</span>
-                  </p>
+{% block shortage_card %}
+<div class="card card-stats">
+  <!-- Card body -->
+  <div class="card-body">
+    <div class="row">
+      <div class="col">
+        <h5 class="card-title text-uppercase text-muted mb-0">Unavaliable Medications</h5>
+        <span class="h2 font-weight-bold mb-0">{{ stotalNo }}</span>
+      </div>
+      <div class="col-auto">
+        <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+          <i class="ni ni-bold-down"></i>
+        </div>
+      </div>
+    </div>
+    <p class="mt-3 mb-0 text-sm">
+      <span class="text-{{ s_arrow_color }} mr-2"><i class="fa fa-arrow-{{ s_up_down_arrow }}"></i> {{ schange_percent }}% </span>
+      <span class="text-nowrap">{{ schange_note }}</span>
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block patients_curve %}
+<div class="card bg-default">
+  <div class="card-header bg-transparent">
+    <div class="row align-items-center">
+      <div class="col">
+        <h6 class="text-light text-uppercase ls-1 mb-1">Overview</h6>
+        <h5 class="h3 text-white mb-0">New Registered Pateionts (Last 6 Months)</h5>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <!-- Chart -->
+    <div class="chart">
+      <!-- Chart wrapper -->
+      <canvas id="chart-patients-dark" class="chart-canvas"></canvas>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block entries_bars %}
+<div class="card">
+  <div class="card-header bg-transparent">
+    <div class="row align-items-center">
+      <div class="col">
+        <h6 class="text-uppercase text-muted ls-1 mb-1">Overview</h6>
+        <h5 class="h3 mb-0">Incoming Midications (Last 6 Months)</h5>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <!-- Chart -->
+    <div class="chart">
+      <canvas id="chart-bars" class="chart-canvas"></canvas>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block entries_details %}
+
+<div class="card">
+  <div class="card-header border-0">
+    <div class="row align-items-center">
+      <div class="col">
+        <h3 class="mb-0">Midications Shipments Details</h3>
+      </div>
+      <div class="col text-right"></div>
+    </div>
+  </div>
+  <div class="table-responsive">
+    <!-- Projects table -->
+    <table class="table align-items-center table-flush">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Midication Name</th>
+          <th scope="col">Entry Date</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for entry in mentries_details %}
+        <tr>
+          <th scope="row">{{ entry.medication.name }}</th>
+          <td>{{ entry.entry_date }}</td>
+          <td>{{ entry.amount }}</td>
+          <td>{{ entry.source }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+          <td colspan="5" class="text-center">No medication entries found.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
+
+{% block medication_avaliablity %}
+
+          <div class="card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">Medication Deficit Ratio</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="{% url 'availablity_report' %}" class="btn btn-sm btn-primary">See all</a>
                 </div>
               </div>
+            </div>
+            <div class="table-responsive">
+              <!-- Projects table -->
+              <table class="table align-items-center table-flush">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Medication</th>
+                    <th scope="col">Patients</th>
+                    <th scope="col">Deficit Ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for medic in medications_deficit %}
+                  <tr>
+                    <th scope="row">{{ medic.medication}}</th>
+                    <td>{{ medic.patients }}</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">{{ medic.unavailability_rate }}%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar bg-gradient-danger" role="progressbar" aria-valuenow="{{ medic.unavailability_rate }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ medic.unavailability_rate }}%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  {% empty %}
+                  <tr><th scope="row" colspan="3">No Medications Data Found</th></tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
 {% endblock %}
-            
+
+{% block custom_js %}
+<script>
+  // Load chart data from Django context
+  const chartData = JSON.parse('{{ patients_chart|escapejs }}');
+
+  const ctx = document.getElementById('chart-patients-dark').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: chartData,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { position: 'top' },
+        title: {
+          display: true,
+          text: 'New Registered Patients (Last 6 Months)'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          max: 50,
+          ticks: {
+            stepSize: 5,
+            callback: function (value) {
+              return value + ' patients';
+            },
+            color: 'red',      // change label color
+            font: { size: 14 }  // change label font size
+          },
+          title: {
+            display: true,
+            text: 'Number of Patients',
+            color: 'red',
+            font: { size: 16, weight: 'bold' }
+          }
+        }
+      }
+    }
+  });
+
+  var $chart = $('#chart-bars');
+  // Init chart
+  function initChart($chart) {
+
+    // Create chart
+    var entriesChart = new Chart($chart, {
+      type: 'bar',
+      data: JSON.parse('{{ entries_bars|escapejs }}'),
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            max: 20,
+            ticks: {
+              beginAtZero: true,
+              stepSize: 5
+            },
+            scaleLabel: {
+              display: true,
+              labelString: 'Total Shipments'
+            }
+          }],
+          xAxes: [{
+            scaleLabel: {
+              display: true,
+              labelString: 'Months'
+            }
+          }]
+        }
+      }
+    });
+
+    // Save to jQuery object
+    $chart.data('chart', entriesChart);
+  }
+  // Init chart
+  if ($chart.length) {
+    initChart($chart);
+  }
+
+</script>
+{% endblock %}
