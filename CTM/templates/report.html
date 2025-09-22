@@ -1,0 +1,136 @@
+<!--
+=========================================================
+* Argon Dashboard - v1.2.0
+=========================================================
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+
+
+* Copyright  Creative Tim (http://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+
+
+=========================================================
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="canonical" href="https://appseed.us/admin-dashboards/django-dashboard-argon">
+  
+  <title>
+    Cancer Therapeutic Medication Monitoring System Dashboard
+  </title>
+
+  <!-- Favicon - loaded as static -->
+  <link rel="icon" href="/static/assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="/static/assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="/static/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="/static/assets/css/argon.css?v=1.2.0" type="text/css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+</head>
+
+<body class="">
+
+  <div class="main-content" id="panel">
+
+    <!-- Header -->
+    <div class="header bg-primary pb-6">
+      <div class="container-fluid">
+        <div class="header-body">
+          <div class="row align-items-center py-4">
+            <div class="col-lg-6 col-7">
+             <h6 class="h2 text-white d-inline-block mb-0">Cancer Therapeutic Medication Monitoring System</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="container-fluid mt--6">
+      <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">Medication Avaliablity Ratio</h3>
+                </div>
+                <div class="col text-right">
+                </div>
+              </div>
+            </div>
+            <div class="table-responsive">
+            <table class="table align-items-center table-flush" id="medicationsTable">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Medication</th>
+                    <th scope="col">Patients</th>
+                    <th scope="col">Required</th>
+                    <th scope="col">Avaliable</th>
+                    <th scope="col">Avaliablity Ratio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for medic in medications_list %}
+                    <tr>
+                    <th scope="row">{{ medic.medication}}</th>
+                    <td>{{ medic.patients }}</td>
+                    <td>{{ medic.required }}</td>
+                    <td>{{ medic.available }}</td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2">{{ medic.availability_rate }}%</span>
+                        <div>
+                          <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="{{ medic.availability_rate }}" aria-valuemin="0" aria-valuemax="100" style="width:{{ medic.availability_rate }}%;"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  {% empty %}
+                  <tr><th scope="row" colspan="5">No Medications Data Found</th></tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include "includes/footer.html" %}
+
+    </div>
+
+<!-- Specific JS goes HERE --> 
+{% block javascripts %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+{% endblock javascripts %}
+
+  </div>
+
+<script>
+$(document).ready(function() {
+    $('#medicationsTable').DataTable({
+        "pageLength": 10,       // Show 10 rows per page
+        "ordering": true,       // Enable sorting
+        "searching": true,      // Enable searching
+        "lengthChange": true,   // Allow user to change page length
+    });
+});
+</script>
+</body>
+
+</html>
+
